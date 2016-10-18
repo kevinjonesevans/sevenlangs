@@ -56,3 +56,11 @@ ruby_tree.visit_all {|node| puts node.node_name}
 
 # make the above Tree class init accept nested hashes with empties
 # should be able to specify liek this: {'grandpa' => {'dad' => {'child1': {}, 'child2': {}}}}
+
+# open a file and search its text for a regex string
+filename = 'test.txt'
+search_string = 'Some Interesting Text'
+
+File.open(filename) do |f|
+  f.grep(search_string)
+end
